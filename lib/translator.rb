@@ -6,7 +6,7 @@ new_hash = {}
 emoticons.each do |key, value|
   new_hash[key] = {:english => value[0], :japanese => value[1]}
 end
-puts new_hash
+  new_hash
 end
 load_library("")
 def get_japanese_emoticon
