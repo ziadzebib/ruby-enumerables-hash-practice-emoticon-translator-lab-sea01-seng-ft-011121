@@ -2,6 +2,7 @@ require 'yaml'
 emoticons = YAML.load_file('emoticons.yml')
 
 def load_library(path)
+puts "hello"
 puts emoticons.inspect
 end
 
