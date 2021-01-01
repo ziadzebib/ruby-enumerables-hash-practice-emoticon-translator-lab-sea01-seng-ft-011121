@@ -1,16 +1,21 @@
 require 'yaml'
 
 def load_library(path)
-emoticons = YAML.load_file(path)
-new_hash = {}
-emoticons.each do |key, value|
-  new_hash[key] = {:english => value[0], :japanese => value[1]}
-end
+  emoticons = YAML.load_file(path)
+  new_hash = {}
+  emoticons.each do |key, value|
+    new_hash[key] = {:english => value[0], :japanese => value[1]}
+  end
   new_hash
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(path, emoticon_eng)
+  japanese_hash = load_library(path)
+  japanese_hash.each do |key, value|
+    if value[:english] == emoticon_eng
+      return value[:japanese]
+    end
+  end
 end
 
 def get_english_meaning(path, emoticon_jpn)
