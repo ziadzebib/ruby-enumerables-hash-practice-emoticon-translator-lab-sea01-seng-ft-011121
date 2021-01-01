@@ -13,6 +13,6 @@ def get_japanese_emoticon
   # code goes here
 end
 
-def get_english_meaning(path,)
+def get_english_meaning(path, emoticon_jap)
   # code goes here
 end
