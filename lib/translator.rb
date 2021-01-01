@@ -14,10 +14,10 @@ def get_japanese_emoticon
 end
 
 def get_english_meaning(path, emoticon_jpn)
-english_hash = load_library(path)
-english_hash.each do |key, value|
-  if value[:japanese] == emoticon_jpn
-  return key
+  english_hash = load_library(path)
+  english_hash.each do |key, value|
+    if value[:japanese] == emoticon_jpn
+      return key
+    end
   end
-end
 end
